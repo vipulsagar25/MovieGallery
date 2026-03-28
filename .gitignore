@@ -1,0 +1,40 @@
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Massive ML Artifacts & Datasets
+ML_model/
+Data/
+*.npz
+*.npy
+*.faiss
+*.pkl
+*.csv
+*.tsv
+
+# Redis / Log Dumps
+dump.rdb
+*.log
+logs/
+
+# Development & OS Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Local Notes & Drafts
+project_architecture_and_concepts.md

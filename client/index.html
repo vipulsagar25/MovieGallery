@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendations</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 🔒 LOGIN OVERLAY -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-modal">
+            <h2>Welcome to Movie<span>AI</span></h2>
+            <p>Please enter your User ID to log in.</p>
+            <p class="login-hint">ID must be between 1 and 330,975</p>
+            
+            <div class="login-input-group">
+                <input type="number" id="loginUserId" placeholder="User ID (e.g., 5)" min="1" max="330975">
+                <button id="loginBtn">Login</button>
+            </div>
+            <div id="loginError" class="login-error"></div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        
+        <header class="hero">
+            <h1 class="logo">Movie<span>AI</span></h1>
+            <p class="subtitle">Deep Matrix Factorization</p>
+            
+            <nav class="app-nav">
+                <button id="navHome" class="nav-btn active">Home</button>
+                <button id="navPersonal" class="nav-btn">Personalized</button>
+            </nav>
+        </header>
+        
+        <div class="status-msg" id="statusMessage"></div>
+
+        <main>
+            <!-- Animated Loading Skeleton -->
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>Computing Hyper-Dimensional Subspace...</p>
+            </div>
+
+            <!-- 🌍 HOME / EXPLORE VIEW -->
+            <div id="exploreView" class="view-section">
+                <!-- Utility Bar for Filter & Pagination -->
+                <div class="util-bar">
+                    <h2 class="section-title">Explore Movies</h2>
+                    <div class="util-controls">
+                        <select id="genreFilter" class="modern-select">
+                            <option value="All">All Genres</option>
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Thriller">Thriller</option>
+                        </select>
+                        <div class="pagination">
+                            <button id="prevPage" class="nav-btn" disabled>← Prev</button>
+                            <span id="pageCounter" class="page-counter">Page 1</span>
+                            <button id="nextPage" class="nav-btn">Next →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-grid" id="exploreGrid">
+                    <!-- General movies go here -->
+                </div>
+            </div>
+
+            <!-- 👤 PERSONALIZED VIEW -->
+            <div id="personalView" class="view-section hidden">
+                <h2 class="section-title">Recommended for User <span id="displayUserId"></span></h2>
+                <div class="movie-grid" id="movieGrid">
+                    <!-- Recommendations will be dynamically injected here -->
+                </div>
+
+                <br><br><br>
+                <h2 class="section-title">Because You Watched</h2>
+                <div class="movie-grid" id="historyGrid">
+                    <!-- User's Watched History will be dynamically injected here -->
+                </div>
+            </div>
+        </main>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

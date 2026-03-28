@@ -1,0 +1,16 @@
+# APIs and Web Server
+fastapi
+uvicorn
+
+# Redis & Caching
+redis
+
+# Load Testing
+locust
+
+# Machine Learning & Data Processing
+pandas
+numpy
+scipy
+implicit
+faiss-cpu

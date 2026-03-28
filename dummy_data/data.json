@@ -1,0 +1,1702 @@
+[
+    {
+        "item_id": 1,
+        "name": "Portable Monitor",
+        "category": "Home & Kitchen",
+        "price": 467.79,
+        "rating": 3.1,
+        "reviews_count": 60,
+        "tags": [
+            "home_kitchen",
+            "sale"
+        ],
+        "engagement": {
+            "views": 114,
+            "clicks": 9,
+            "purchases": 0
+        }
+    },
+    {
+        "item_id": 2,
+        "name": "Smart Mouse",
+        "category": "Home & Kitchen",
+        "price": 359.02,
+        "rating": 4.2,
+        "reviews_count": 15,
+        "tags": [
+            "home_kitchen",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 4344,
+            "clicks": 445,
+            "purchases": 40
+        }
+    },
+    {
+        "item_id": 3,
+        "name": "Premium Desk",
+        "category": "Books",
+        "price": 199.99,
+        "rating": 3.6,
+        "reviews_count": 504,
+        "tags": [
+            "books",
+            "sale"
+        ],
+        "engagement": {
+            "views": 4914,
+            "clicks": 920,
+            "purchases": 87
+        }
+    },
+    {
+        "item_id": 4,
+        "name": "Premium Headphones",
+        "category": "Toys",
+        "price": 63.34,
+        "rating": 3.1,
+        "reviews_count": 965,
+        "tags": [
+            "toys",
+            "sale"
+        ],
+        "engagement": {
+            "views": 725,
+            "clicks": 56,
+            "purchases": 1
+        }
+    },
+    {
+        "item_id": 5,
+        "name": "Modern Desk",
+        "category": "Home & Kitchen",
+        "price": 479.73,
+        "rating": 4.6,
+        "reviews_count": 612,
+        "tags": [
+            "home_kitchen",
+            "sale"
+        ],
+        "engagement": {
+            "views": 9602,
+            "clicks": 2582,
+            "purchases": 61
+        }
+    },
+    {
+        "item_id": 6,
+        "name": "Premium Headphones",
+        "category": "Electronics",
+        "price": 278.96,
+        "rating": 5.0,
+        "reviews_count": 247,
+        "tags": [
+            "electronics",
+            "limited"
+        ],
+        "engagement": {
+            "views": 4714,
+            "clicks": 1291,
+            "purchases": 90
+        }
+    },
+    {
+        "item_id": 7,
+        "name": "Durable Headphones",
+        "category": "Electronics",
+        "price": 84.86,
+        "rating": 3.6,
+        "reviews_count": 1113,
+        "tags": [
+            "electronics",
+            "sale"
+        ],
+        "engagement": {
+            "views": 8246,
+            "clicks": 1696,
+            "purchases": 120
+        }
+    },
+    {
+        "item_id": 8,
+        "name": "Modern Keyboard",
+        "category": "Clothing",
+        "price": 74.45,
+        "rating": 3.9,
+        "reviews_count": 1199,
+        "tags": [
+            "clothing",
+            "limited"
+        ],
+        "engagement": {
+            "views": 1897,
+            "clicks": 473,
+            "purchases": 29
+        }
+    },
+    {
+        "item_id": 9,
+        "name": "Durable Jacket",
+        "category": "Beauty",
+        "price": 455.75,
+        "rating": 3.3,
+        "reviews_count": 214,
+        "tags": [
+            "beauty",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 894,
+            "clicks": 117,
+            "purchases": 4
+        }
+    },
+    {
+        "item_id": 10,
+        "name": "Premium Keyboard",
+        "category": "Books",
+        "price": 342.37,
+        "rating": 4.5,
+        "reviews_count": 46,
+        "tags": [
+            "books",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 8206,
+            "clicks": 554,
+            "purchases": 8
+        }
+    },
+    {
+        "item_id": 11,
+        "name": "Smart Bag",
+        "category": "Books",
+        "price": 390.81,
+        "rating": 3.8,
+        "reviews_count": 52,
+        "tags": [
+            "books",
+            "new"
+        ],
+        "engagement": {
+            "views": 7046,
+            "clicks": 1683,
+            "purchases": 34
+        }
+    },
+    {
+        "item_id": 12,
+        "name": "Modern Shoes",
+        "category": "Books",
+        "price": 324.64,
+        "rating": 4.2,
+        "reviews_count": 287,
+        "tags": [
+            "books",
+            "limited"
+        ],
+        "engagement": {
+            "views": 740,
+            "clicks": 132,
+            "purchases": 4
+        }
+    },
+    {
+        "item_id": 13,
+        "name": "Modern Shoes",
+        "category": "Electronics",
+        "price": 347.26,
+        "rating": 3.6,
+        "reviews_count": 1222,
+        "tags": [
+            "electronics",
+            "new"
+        ],
+        "engagement": {
+            "views": 4893,
+            "clicks": 1369,
+            "purchases": 105
+        }
+    },
+    {
+        "item_id": 14,
+        "name": "Wireless Keyboard",
+        "category": "Beauty",
+        "price": 249.11,
+        "rating": 3.8,
+        "reviews_count": 431,
+        "tags": [
+            "beauty",
+            "limited"
+        ],
+        "engagement": {
+            "views": 1382,
+            "clicks": 195,
+            "purchases": 19
+        }
+    },
+    {
+        "item_id": 15,
+        "name": "Portable Mouse",
+        "category": "Toys",
+        "price": 482.5,
+        "rating": 3.3,
+        "reviews_count": 1119,
+        "tags": [
+            "toys",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 9119,
+            "clicks": 1368,
+            "purchases": 23
+        }
+    },
+    {
+        "item_id": 16,
+        "name": "Portable Desk",
+        "category": "Books",
+        "price": 486.05,
+        "rating": 3.4,
+        "reviews_count": 1167,
+        "tags": [
+            "books",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7304,
+            "clicks": 1775,
+            "purchases": 137
+        }
+    },
+    {
+        "item_id": 17,
+        "name": "Compact Jacket",
+        "category": "Books",
+        "price": 14.34,
+        "rating": 3.5,
+        "reviews_count": 1187,
+        "tags": [
+            "books",
+            "new"
+        ],
+        "engagement": {
+            "views": 4896,
+            "clicks": 1400,
+            "purchases": 17
+        }
+    },
+    {
+        "item_id": 18,
+        "name": "Advanced Keyboard",
+        "category": "Books",
+        "price": 362.25,
+        "rating": 3.5,
+        "reviews_count": 202,
+        "tags": [
+            "books",
+            "sale"
+        ],
+        "engagement": {
+            "views": 7592,
+            "clicks": 784,
+            "purchases": 21
+        }
+    },
+    {
+        "item_id": 19,
+        "name": "Durable Monitor",
+        "category": "Sports",
+        "price": 183.33,
+        "rating": 4.8,
+        "reviews_count": 1495,
+        "tags": [
+            "sports",
+            "new"
+        ],
+        "engagement": {
+            "views": 3659,
+            "clicks": 276,
+            "purchases": 10
+        }
+    },
+    {
+        "item_id": 20,
+        "name": "Advanced Bag",
+        "category": "Books",
+        "price": 111.9,
+        "rating": 3.9,
+        "reviews_count": 502,
+        "tags": [
+            "books",
+            "limited"
+        ],
+        "engagement": {
+            "views": 1839,
+            "clicks": 155,
+            "purchases": 7
+        }
+    },
+    {
+        "item_id": 21,
+        "name": "Compact Watch",
+        "category": "Sports",
+        "price": 364.41,
+        "rating": 4.3,
+        "reviews_count": 163,
+        "tags": [
+            "sports",
+            "limited"
+        ],
+        "engagement": {
+            "views": 5067,
+            "clicks": 1097,
+            "purchases": 46
+        }
+    },
+    {
+        "item_id": 22,
+        "name": "Portable Bag",
+        "category": "Clothing",
+        "price": 321.37,
+        "rating": 5.0,
+        "reviews_count": 1010,
+        "tags": [
+            "clothing",
+            "new"
+        ],
+        "engagement": {
+            "views": 2001,
+            "clicks": 110,
+            "purchases": 8
+        }
+    },
+    {
+        "item_id": 23,
+        "name": "Classic Desk",
+        "category": "Beauty",
+        "price": 250.21,
+        "rating": 3.7,
+        "reviews_count": 119,
+        "tags": [
+            "beauty",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 3603,
+            "clicks": 719,
+            "purchases": 15
+        }
+    },
+    {
+        "item_id": 24,
+        "name": "Compact Jacket",
+        "category": "Electronics",
+        "price": 201.29,
+        "rating": 3.8,
+        "reviews_count": 1116,
+        "tags": [
+            "electronics",
+            "limited"
+        ],
+        "engagement": {
+            "views": 9912,
+            "clicks": 2748,
+            "purchases": 214
+        }
+    },
+    {
+        "item_id": 25,
+        "name": "Portable Speaker",
+        "category": "Clothing",
+        "price": 405.09,
+        "rating": 3.7,
+        "reviews_count": 190,
+        "tags": [
+            "clothing",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7221,
+            "clicks": 651,
+            "purchases": 13
+        }
+    },
+    {
+        "item_id": 26,
+        "name": "Advanced Lamp",
+        "category": "Home & Kitchen",
+        "price": 389.03,
+        "rating": 3.9,
+        "reviews_count": 770,
+        "tags": [
+            "home_kitchen",
+            "limited"
+        ],
+        "engagement": {
+            "views": 891,
+            "clicks": 65,
+            "purchases": 2
+        }
+    },
+    {
+        "item_id": 27,
+        "name": "Modern Keyboard",
+        "category": "Beauty",
+        "price": 429.47,
+        "rating": 4.3,
+        "reviews_count": 740,
+        "tags": [
+            "beauty",
+            "limited"
+        ],
+        "engagement": {
+            "views": 5631,
+            "clicks": 394,
+            "purchases": 18
+        }
+    },
+    {
+        "item_id": 28,
+        "name": "Advanced Speaker",
+        "category": "Electronics",
+        "price": 438.87,
+        "rating": 4.2,
+        "reviews_count": 319,
+        "tags": [
+            "electronics",
+            "limited"
+        ],
+        "engagement": {
+            "views": 8640,
+            "clicks": 2415,
+            "purchases": 117
+        }
+    },
+    {
+        "item_id": 29,
+        "name": "Wireless Shoes",
+        "category": "Electronics",
+        "price": 146.12,
+        "rating": 3.5,
+        "reviews_count": 152,
+        "tags": [
+            "electronics",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7493,
+            "clicks": 1834,
+            "purchases": 85
+        }
+    },
+    {
+        "item_id": 30,
+        "name": "Modern Jacket",
+        "category": "Home & Kitchen",
+        "price": 310.8,
+        "rating": 4.9,
+        "reviews_count": 1435,
+        "tags": [
+            "home_kitchen",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 2198,
+            "clicks": 193,
+            "purchases": 4
+        }
+    },
+    {
+        "item_id": 31,
+        "name": "Advanced Bag",
+        "category": "Clothing",
+        "price": 338.07,
+        "rating": 3.1,
+        "reviews_count": 802,
+        "tags": [
+            "clothing",
+            "sale"
+        ],
+        "engagement": {
+            "views": 7335,
+            "clicks": 1880,
+            "purchases": 154
+        }
+    },
+    {
+        "item_id": 32,
+        "name": "Wireless Watch",
+        "category": "Electronics",
+        "price": 434.46,
+        "rating": 3.3,
+        "reviews_count": 895,
+        "tags": [
+            "electronics",
+            "new"
+        ],
+        "engagement": {
+            "views": 3500,
+            "clicks": 617,
+            "purchases": 39
+        }
+    },
+    {
+        "item_id": 33,
+        "name": "Wireless Watch",
+        "category": "Sports",
+        "price": 472.84,
+        "rating": 4.1,
+        "reviews_count": 314,
+        "tags": [
+            "sports",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 8119,
+            "clicks": 1087,
+            "purchases": 18
+        }
+    },
+    {
+        "item_id": 34,
+        "name": "Premium Speaker",
+        "category": "Toys",
+        "price": 20.04,
+        "rating": 3.2,
+        "reviews_count": 1006,
+        "tags": [
+            "toys",
+            "new"
+        ],
+        "engagement": {
+            "views": 4128,
+            "clicks": 1153,
+            "purchases": 75
+        }
+    },
+    {
+        "item_id": 35,
+        "name": "Compact Mouse",
+        "category": "Sports",
+        "price": 323.27,
+        "rating": 4.7,
+        "reviews_count": 763,
+        "tags": [
+            "sports",
+            "limited"
+        ],
+        "engagement": {
+            "views": 1969,
+            "clicks": 353,
+            "purchases": 28
+        }
+    },
+    {
+        "item_id": 36,
+        "name": "Ergonomic Water Bottle",
+        "category": "Clothing",
+        "price": 105.17,
+        "rating": 4.8,
+        "reviews_count": 359,
+        "tags": [
+            "clothing",
+            "sale"
+        ],
+        "engagement": {
+            "views": 1043,
+            "clicks": 59,
+            "purchases": 4
+        }
+    },
+    {
+        "item_id": 37,
+        "name": "Modern Water Bottle",
+        "category": "Toys",
+        "price": 424.14,
+        "rating": 4.0,
+        "reviews_count": 728,
+        "tags": [
+            "toys",
+            "limited"
+        ],
+        "engagement": {
+            "views": 252,
+            "clicks": 50,
+            "purchases": 2
+        }
+    },
+    {
+        "item_id": 38,
+        "name": "Advanced Desk",
+        "category": "Electronics",
+        "price": 122.95,
+        "rating": 4.3,
+        "reviews_count": 1053,
+        "tags": [
+            "electronics",
+            "limited"
+        ],
+        "engagement": {
+            "views": 4412,
+            "clicks": 1155,
+            "purchases": 74
+        }
+    },
+    {
+        "item_id": 39,
+        "name": "Advanced Keyboard",
+        "category": "Clothing",
+        "price": 320.28,
+        "rating": 4.5,
+        "reviews_count": 457,
+        "tags": [
+            "clothing",
+            "limited"
+        ],
+        "engagement": {
+            "views": 5135,
+            "clicks": 918,
+            "purchases": 37
+        }
+    },
+    {
+        "item_id": 40,
+        "name": "Classic Water Bottle",
+        "category": "Electronics",
+        "price": 464.08,
+        "rating": 3.6,
+        "reviews_count": 499,
+        "tags": [
+            "electronics",
+            "sale"
+        ],
+        "engagement": {
+            "views": 8651,
+            "clicks": 1635,
+            "purchases": 147
+        }
+    },
+    {
+        "item_id": 41,
+        "name": "Durable Bag",
+        "category": "Electronics",
+        "price": 398.14,
+        "rating": 3.0,
+        "reviews_count": 1228,
+        "tags": [
+            "electronics",
+            "new"
+        ],
+        "engagement": {
+            "views": 9534,
+            "clicks": 519,
+            "purchases": 15
+        }
+    },
+    {
+        "item_id": 42,
+        "name": "Modern Keyboard",
+        "category": "Electronics",
+        "price": 325.25,
+        "rating": 4.1,
+        "reviews_count": 869,
+        "tags": [
+            "electronics",
+            "limited"
+        ],
+        "engagement": {
+            "views": 6918,
+            "clicks": 1955,
+            "purchases": 144
+        }
+    },
+    {
+        "item_id": 43,
+        "name": "Classic Lamp",
+        "category": "Clothing",
+        "price": 410.26,
+        "rating": 4.7,
+        "reviews_count": 725,
+        "tags": [
+            "clothing",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 3070,
+            "clicks": 729,
+            "purchases": 30
+        }
+    },
+    {
+        "item_id": 44,
+        "name": "Premium Shoes",
+        "category": "Clothing",
+        "price": 289.7,
+        "rating": 4.9,
+        "reviews_count": 72,
+        "tags": [
+            "clothing",
+            "new"
+        ],
+        "engagement": {
+            "views": 7759,
+            "clicks": 907,
+            "purchases": 57
+        }
+    },
+    {
+        "item_id": 45,
+        "name": "Ergonomic Jacket",
+        "category": "Sports",
+        "price": 451.83,
+        "rating": 3.0,
+        "reviews_count": 961,
+        "tags": [
+            "sports",
+            "sale"
+        ],
+        "engagement": {
+            "views": 626,
+            "clicks": 185,
+            "purchases": 3
+        }
+    },
+    {
+        "item_id": 46,
+        "name": "Compact Bag",
+        "category": "Toys",
+        "price": 216.28,
+        "rating": 4.8,
+        "reviews_count": 1367,
+        "tags": [
+            "toys",
+            "sale"
+        ],
+        "engagement": {
+            "views": 2414,
+            "clicks": 634,
+            "purchases": 22
+        }
+    },
+    {
+        "item_id": 47,
+        "name": "Classic Keyboard",
+        "category": "Sports",
+        "price": 384.34,
+        "rating": 4.0,
+        "reviews_count": 122,
+        "tags": [
+            "sports",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 290,
+            "clicks": 85,
+            "purchases": 6
+        }
+    },
+    {
+        "item_id": 48,
+        "name": "Smart Lamp",
+        "category": "Clothing",
+        "price": 294.59,
+        "rating": 4.3,
+        "reviews_count": 613,
+        "tags": [
+            "clothing",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 8955,
+            "clicks": 1297,
+            "purchases": 34
+        }
+    },
+    {
+        "item_id": 49,
+        "name": "Smart Watch",
+        "category": "Toys",
+        "price": 497.68,
+        "rating": 3.2,
+        "reviews_count": 681,
+        "tags": [
+            "toys",
+            "sale"
+        ],
+        "engagement": {
+            "views": 4594,
+            "clicks": 1120,
+            "purchases": 12
+        }
+    },
+    {
+        "item_id": 50,
+        "name": "Durable Keyboard",
+        "category": "Books",
+        "price": 81.77,
+        "rating": 3.4,
+        "reviews_count": 1283,
+        "tags": [
+            "books",
+            "new"
+        ],
+        "engagement": {
+            "views": 8593,
+            "clicks": 1696,
+            "purchases": 129
+        }
+    },
+    {
+        "item_id": 51,
+        "name": "Portable Keyboard",
+        "category": "Sports",
+        "price": 366.61,
+        "rating": 4.3,
+        "reviews_count": 1170,
+        "tags": [
+            "sports",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 982,
+            "clicks": 259,
+            "purchases": 10
+        }
+    },
+    {
+        "item_id": 52,
+        "name": "Premium Monitor",
+        "category": "Sports",
+        "price": 216.45,
+        "rating": 3.2,
+        "reviews_count": 1214,
+        "tags": [
+            "sports",
+            "sale"
+        ],
+        "engagement": {
+            "views": 4728,
+            "clicks": 993,
+            "purchases": 97
+        }
+    },
+    {
+        "item_id": 53,
+        "name": "Ergonomic Mouse",
+        "category": "Sports",
+        "price": 317.7,
+        "rating": 3.5,
+        "reviews_count": 1032,
+        "tags": [
+            "sports",
+            "sale"
+        ],
+        "engagement": {
+            "views": 3702,
+            "clicks": 410,
+            "purchases": 14
+        }
+    },
+    {
+        "item_id": 54,
+        "name": "Durable Watch",
+        "category": "Sports",
+        "price": 253.89,
+        "rating": 5.0,
+        "reviews_count": 132,
+        "tags": [
+            "sports",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 5579,
+            "clicks": 1488,
+            "purchases": 28
+        }
+    },
+    {
+        "item_id": 55,
+        "name": "Durable Bag",
+        "category": "Sports",
+        "price": 228.77,
+        "rating": 4.1,
+        "reviews_count": 353,
+        "tags": [
+            "sports",
+            "new"
+        ],
+        "engagement": {
+            "views": 6257,
+            "clicks": 1834,
+            "purchases": 151
+        }
+    },
+    {
+        "item_id": 56,
+        "name": "Durable Jacket",
+        "category": "Beauty",
+        "price": 185.2,
+        "rating": 4.8,
+        "reviews_count": 121,
+        "tags": [
+            "beauty",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 9246,
+            "clicks": 1808,
+            "purchases": 80
+        }
+    },
+    {
+        "item_id": 57,
+        "name": "Premium Water Bottle",
+        "category": "Beauty",
+        "price": 294.97,
+        "rating": 3.1,
+        "reviews_count": 848,
+        "tags": [
+            "beauty",
+            "new"
+        ],
+        "engagement": {
+            "views": 1305,
+            "clicks": 199,
+            "purchases": 15
+        }
+    },
+    {
+        "item_id": 58,
+        "name": "Classic Monitor",
+        "category": "Toys",
+        "price": 353.52,
+        "rating": 4.3,
+        "reviews_count": 1352,
+        "tags": [
+            "toys",
+            "new"
+        ],
+        "engagement": {
+            "views": 5899,
+            "clicks": 680,
+            "purchases": 55
+        }
+    },
+    {
+        "item_id": 59,
+        "name": "Smart Lamp",
+        "category": "Electronics",
+        "price": 431.23,
+        "rating": 5.0,
+        "reviews_count": 243,
+        "tags": [
+            "electronics",
+            "sale"
+        ],
+        "engagement": {
+            "views": 869,
+            "clicks": 221,
+            "purchases": 11
+        }
+    },
+    {
+        "item_id": 60,
+        "name": "Durable Headphones",
+        "category": "Sports",
+        "price": 444.84,
+        "rating": 4.0,
+        "reviews_count": 526,
+        "tags": [
+            "sports",
+            "limited"
+        ],
+        "engagement": {
+            "views": 568,
+            "clicks": 125,
+            "purchases": 9
+        }
+    },
+    {
+        "item_id": 61,
+        "name": "Wireless Speaker",
+        "category": "Sports",
+        "price": 307.48,
+        "rating": 3.2,
+        "reviews_count": 190,
+        "tags": [
+            "sports",
+            "new"
+        ],
+        "engagement": {
+            "views": 6023,
+            "clicks": 970,
+            "purchases": 89
+        }
+    },
+    {
+        "item_id": 62,
+        "name": "Portable Water Bottle",
+        "category": "Books",
+        "price": 134.19,
+        "rating": 4.5,
+        "reviews_count": 522,
+        "tags": [
+            "books",
+            "sale"
+        ],
+        "engagement": {
+            "views": 3089,
+            "clicks": 847,
+            "purchases": 14
+        }
+    },
+    {
+        "item_id": 63,
+        "name": "Classic Monitor",
+        "category": "Toys",
+        "price": 274.1,
+        "rating": 3.5,
+        "reviews_count": 510,
+        "tags": [
+            "toys",
+            "new"
+        ],
+        "engagement": {
+            "views": 3917,
+            "clicks": 268,
+            "purchases": 7
+        }
+    },
+    {
+        "item_id": 64,
+        "name": "Classic Water Bottle",
+        "category": "Clothing",
+        "price": 409.49,
+        "rating": 3.0,
+        "reviews_count": 1367,
+        "tags": [
+            "clothing",
+            "sale"
+        ],
+        "engagement": {
+            "views": 881,
+            "clicks": 217,
+            "purchases": 14
+        }
+    },
+    {
+        "item_id": 65,
+        "name": "Advanced Desk",
+        "category": "Electronics",
+        "price": 219.67,
+        "rating": 4.2,
+        "reviews_count": 658,
+        "tags": [
+            "electronics",
+            "new"
+        ],
+        "engagement": {
+            "views": 8286,
+            "clicks": 1765,
+            "purchases": 112
+        }
+    },
+    {
+        "item_id": 66,
+        "name": "Smart Watch",
+        "category": "Beauty",
+        "price": 192.17,
+        "rating": 4.8,
+        "reviews_count": 420,
+        "tags": [
+            "beauty",
+            "limited"
+        ],
+        "engagement": {
+            "views": 727,
+            "clicks": 59,
+            "purchases": 4
+        }
+    },
+    {
+        "item_id": 67,
+        "name": "Portable Mouse",
+        "category": "Sports",
+        "price": 47.94,
+        "rating": 3.8,
+        "reviews_count": 292,
+        "tags": [
+            "sports",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7572,
+            "clicks": 1205,
+            "purchases": 15
+        }
+    },
+    {
+        "item_id": 68,
+        "name": "Premium Headphones",
+        "category": "Electronics",
+        "price": 189.75,
+        "rating": 3.2,
+        "reviews_count": 1102,
+        "tags": [
+            "electronics",
+            "new"
+        ],
+        "engagement": {
+            "views": 6149,
+            "clicks": 1139,
+            "purchases": 47
+        }
+    },
+    {
+        "item_id": 69,
+        "name": "Classic Water Bottle",
+        "category": "Beauty",
+        "price": 214.97,
+        "rating": 4.7,
+        "reviews_count": 292,
+        "tags": [
+            "beauty",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7802,
+            "clicks": 2142,
+            "purchases": 65
+        }
+    },
+    {
+        "item_id": 70,
+        "name": "Portable Watch",
+        "category": "Books",
+        "price": 498.14,
+        "rating": 3.2,
+        "reviews_count": 569,
+        "tags": [
+            "books",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7511,
+            "clicks": 925,
+            "purchases": 18
+        }
+    },
+    {
+        "item_id": 71,
+        "name": "Wireless Headphones",
+        "category": "Home & Kitchen",
+        "price": 81.71,
+        "rating": 3.9,
+        "reviews_count": 255,
+        "tags": [
+            "home_kitchen",
+            "new"
+        ],
+        "engagement": {
+            "views": 6230,
+            "clicks": 1105,
+            "purchases": 62
+        }
+    },
+    {
+        "item_id": 72,
+        "name": "Wireless Watch",
+        "category": "Clothing",
+        "price": 268.54,
+        "rating": 4.5,
+        "reviews_count": 908,
+        "tags": [
+            "clothing",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 1010,
+            "clicks": 104,
+            "purchases": 5
+        }
+    },
+    {
+        "item_id": 73,
+        "name": "Premium Watch",
+        "category": "Clothing",
+        "price": 472.99,
+        "rating": 3.5,
+        "reviews_count": 1148,
+        "tags": [
+            "clothing",
+            "limited"
+        ],
+        "engagement": {
+            "views": 127,
+            "clicks": 27,
+            "purchases": 0
+        }
+    },
+    {
+        "item_id": 74,
+        "name": "Advanced Watch",
+        "category": "Clothing",
+        "price": 255.23,
+        "rating": 4.1,
+        "reviews_count": 341,
+        "tags": [
+            "clothing",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 4453,
+            "clicks": 388,
+            "purchases": 8
+        }
+    },
+    {
+        "item_id": 75,
+        "name": "Ergonomic Mouse",
+        "category": "Sports",
+        "price": 121.25,
+        "rating": 3.7,
+        "reviews_count": 61,
+        "tags": [
+            "sports",
+            "limited"
+        ],
+        "engagement": {
+            "views": 742,
+            "clicks": 167,
+            "purchases": 8
+        }
+    },
+    {
+        "item_id": 76,
+        "name": "Advanced Keyboard",
+        "category": "Toys",
+        "price": 216.88,
+        "rating": 3.8,
+        "reviews_count": 573,
+        "tags": [
+            "toys",
+            "sale"
+        ],
+        "engagement": {
+            "views": 2976,
+            "clicks": 301,
+            "purchases": 4
+        }
+    },
+    {
+        "item_id": 77,
+        "name": "Premium Bag",
+        "category": "Beauty",
+        "price": 87.06,
+        "rating": 3.7,
+        "reviews_count": 1380,
+        "tags": [
+            "beauty",
+            "sale"
+        ],
+        "engagement": {
+            "views": 3128,
+            "clicks": 895,
+            "purchases": 48
+        }
+    },
+    {
+        "item_id": 78,
+        "name": "Classic Bag",
+        "category": "Beauty",
+        "price": 381.73,
+        "rating": 4.0,
+        "reviews_count": 83,
+        "tags": [
+            "beauty",
+            "new"
+        ],
+        "engagement": {
+            "views": 636,
+            "clicks": 35,
+            "purchases": 3
+        }
+    },
+    {
+        "item_id": 79,
+        "name": "Portable Keyboard",
+        "category": "Toys",
+        "price": 65.18,
+        "rating": 3.3,
+        "reviews_count": 405,
+        "tags": [
+            "toys",
+            "new"
+        ],
+        "engagement": {
+            "views": 5324,
+            "clicks": 277,
+            "purchases": 24
+        }
+    },
+    {
+        "item_id": 80,
+        "name": "Compact Monitor",
+        "category": "Clothing",
+        "price": 53.79,
+        "rating": 3.3,
+        "reviews_count": 594,
+        "tags": [
+            "clothing",
+            "new"
+        ],
+        "engagement": {
+            "views": 7857,
+            "clicks": 2047,
+            "purchases": 124
+        }
+    },
+    {
+        "item_id": 81,
+        "name": "Compact Desk",
+        "category": "Beauty",
+        "price": 203.77,
+        "rating": 4.3,
+        "reviews_count": 262,
+        "tags": [
+            "beauty",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 898,
+            "clicks": 96,
+            "purchases": 7
+        }
+    },
+    {
+        "item_id": 82,
+        "name": "Modern Lamp",
+        "category": "Home & Kitchen",
+        "price": 19.95,
+        "rating": 4.3,
+        "reviews_count": 281,
+        "tags": [
+            "home_kitchen",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 8896,
+            "clicks": 1289,
+            "purchases": 38
+        }
+    },
+    {
+        "item_id": 83,
+        "name": "Classic Jacket",
+        "category": "Beauty",
+        "price": 244.48,
+        "rating": 3.9,
+        "reviews_count": 461,
+        "tags": [
+            "beauty",
+            "limited"
+        ],
+        "engagement": {
+            "views": 7802,
+            "clicks": 1097,
+            "purchases": 24
+        }
+    },
+    {
+        "item_id": 84,
+        "name": "Modern Speaker",
+        "category": "Toys",
+        "price": 363.92,
+        "rating": 4.8,
+        "reviews_count": 991,
+        "tags": [
+            "toys",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 8833,
+            "clicks": 1970,
+            "purchases": 167
+        }
+    },
+    {
+        "item_id": 85,
+        "name": "Smart Desk",
+        "category": "Clothing",
+        "price": 255.04,
+        "rating": 3.1,
+        "reviews_count": 428,
+        "tags": [
+            "clothing",
+            "new"
+        ],
+        "engagement": {
+            "views": 5194,
+            "clicks": 1288,
+            "purchases": 18
+        }
+    },
+    {
+        "item_id": 86,
+        "name": "Ergonomic Headphones",
+        "category": "Home & Kitchen",
+        "price": 395.37,
+        "rating": 3.4,
+        "reviews_count": 1313,
+        "tags": [
+            "home_kitchen",
+            "limited"
+        ],
+        "engagement": {
+            "views": 9268,
+            "clicks": 2370,
+            "purchases": 172
+        }
+    },
+    {
+        "item_id": 87,
+        "name": "Ergonomic Desk",
+        "category": "Toys",
+        "price": 281.23,
+        "rating": 4.1,
+        "reviews_count": 342,
+        "tags": [
+            "toys",
+            "sale"
+        ],
+        "engagement": {
+            "views": 4667,
+            "clicks": 466,
+            "purchases": 28
+        }
+    },
+    {
+        "item_id": 88,
+        "name": "Wireless Water Bottle",
+        "category": "Clothing",
+        "price": 415.01,
+        "rating": 3.6,
+        "reviews_count": 1484,
+        "tags": [
+            "clothing",
+            "sale"
+        ],
+        "engagement": {
+            "views": 4581,
+            "clicks": 1172,
+            "purchases": 37
+        }
+    },
+    {
+        "item_id": 89,
+        "name": "Ergonomic Watch",
+        "category": "Beauty",
+        "price": 377.87,
+        "rating": 4.3,
+        "reviews_count": 1310,
+        "tags": [
+            "beauty",
+            "new"
+        ],
+        "engagement": {
+            "views": 9610,
+            "clicks": 541,
+            "purchases": 29
+        }
+    },
+    {
+        "item_id": 90,
+        "name": "Portable Jacket",
+        "category": "Electronics",
+        "price": 115.02,
+        "rating": 4.6,
+        "reviews_count": 35,
+        "tags": [
+            "electronics",
+            "sale"
+        ],
+        "engagement": {
+            "views": 5365,
+            "clicks": 941,
+            "purchases": 73
+        }
+    },
+    {
+        "item_id": 91,
+        "name": "Premium Lamp",
+        "category": "Electronics",
+        "price": 138.81,
+        "rating": 4.6,
+        "reviews_count": 320,
+        "tags": [
+            "electronics",
+            "new"
+        ],
+        "engagement": {
+            "views": 3488,
+            "clicks": 762,
+            "purchases": 16
+        }
+    },
+    {
+        "item_id": 92,
+        "name": "Compact Lamp",
+        "category": "Beauty",
+        "price": 448.48,
+        "rating": 4.1,
+        "reviews_count": 683,
+        "tags": [
+            "beauty",
+            "limited"
+        ],
+        "engagement": {
+            "views": 5746,
+            "clicks": 888,
+            "purchases": 71
+        }
+    },
+    {
+        "item_id": 93,
+        "name": "Smart Jacket",
+        "category": "Beauty",
+        "price": 376.23,
+        "rating": 3.4,
+        "reviews_count": 409,
+        "tags": [
+            "beauty",
+            "new"
+        ],
+        "engagement": {
+            "views": 9720,
+            "clicks": 603,
+            "purchases": 52
+        }
+    },
+    {
+        "item_id": 94,
+        "name": "Durable Watch",
+        "category": "Toys",
+        "price": 121.33,
+        "rating": 4.4,
+        "reviews_count": 1216,
+        "tags": [
+            "toys",
+            "sale"
+        ],
+        "engagement": {
+            "views": 3691,
+            "clicks": 1062,
+            "purchases": 38
+        }
+    },
+    {
+        "item_id": 95,
+        "name": "Portable Shoes",
+        "category": "Books",
+        "price": 211.56,
+        "rating": 3.1,
+        "reviews_count": 863,
+        "tags": [
+            "books",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 1015,
+            "clicks": 109,
+            "purchases": 1
+        }
+    },
+    {
+        "item_id": 96,
+        "name": "Durable Keyboard",
+        "category": "Books",
+        "price": 247.23,
+        "rating": 4.3,
+        "reviews_count": 1424,
+        "tags": [
+            "books",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 819,
+            "clicks": 71,
+            "purchases": 3
+        }
+    },
+    {
+        "item_id": 97,
+        "name": "Portable Desk",
+        "category": "Home & Kitchen",
+        "price": 339.54,
+        "rating": 3.9,
+        "reviews_count": 427,
+        "tags": [
+            "home_kitchen",
+            "bestseller"
+        ],
+        "engagement": {
+            "views": 3460,
+            "clicks": 958,
+            "purchases": 45
+        }
+    },
+    {
+        "item_id": 98,
+        "name": "Compact Keyboard",
+        "category": "Beauty",
+        "price": 401.68,
+        "rating": 3.3,
+        "reviews_count": 358,
+        "tags": [
+            "beauty",
+            "new"
+        ],
+        "engagement": {
+            "views": 4133,
+            "clicks": 292,
+            "purchases": 9
+        }
+    },
+    {
+        "item_id": 99,
+        "name": "Durable Bag",
+        "category": "Beauty",
+        "price": 302.01,
+        "rating": 4.4,
+        "reviews_count": 1323,
+        "tags": [
+            "beauty",
+            "new"
+        ],
+        "engagement": {
+            "views": 8535,
+            "clicks": 2134,
+            "purchases": 161
+        }
+    },
+    {
+        "item_id": 100,
+        "name": "Ergonomic Water Bottle",
+        "category": "Books",
+        "price": 401.88,
+        "rating": 4.7,
+        "reviews_count": 752,
+        "tags": [
+            "books",
+            "new"
+        ],
+        "engagement": {
+            "views": 4652,
+            "clicks": 1173,
+            "purchases": 27
+        }
+    }
+]
