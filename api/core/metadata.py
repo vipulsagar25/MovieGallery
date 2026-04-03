@@ -26,7 +26,7 @@ def load_movie_metadata():
                     except ValueError:
                         continue
         except Exception as e:
-            logger.warning(f"⚠️ Failed to load links.csv: {e}")
+            logger.warning(f"Failed to load links.csv: {e}")
 
         with open(MOVIES_FILE, mode='r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
@@ -59,9 +59,9 @@ def load_movie_metadata():
                         except ValueError:
                             pass
 
-        print(f"🎬 Hydration complete: Loaded {len(_movie_db):,} movies into Memory Cache.")
+        print(f"Hydration complete: Loaded {len(_movie_db):,} movies into Memory Cache.")
     except Exception as e:
-        logger.error(f"❌ Failed to load movie metadata from {MOVIES_FILE}: {e}")
+        logger.error(f"Failed to load movie metadata from {MOVIES_FILE}: {e}")
 
 
 def hydrate_recommendations(movie_ids: list[int]) -> list[dict]:

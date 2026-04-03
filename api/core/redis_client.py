@@ -1,147 +1,110 @@
-import json
+"""
+Production Redis client — connection pooling, lockless metrics, TTL strategy.
+"""
 import asyncio
 import logging
 import random
-import uuid
+import re
 import redis.asyncio as redis
 from core.config import get_settings
 
 logger = logging.getLogger(__name__)
 
 # ── Global state ──
-_redis_pool: redis.Redis | None = None
+_redis_pools: dict[int, redis.Redis] = {}
 
 
-# ── Cache metrics (concurrency-safe) ──
+# ── Cache metrics — lockless atomic counters for 10K+ RPS ──
 class CacheMetrics:
-    """Track cache performance. In production, use Prometheus counters (lock-free, atomic)."""
-    hits: int = 0
-    misses: int = 0
-    _lock: asyncio.Lock | None = None
-
-    @classmethod
-    def _get_lock(cls) -> asyncio.Lock:
-        if cls._lock is None:
-            cls._lock = asyncio.Lock()
-        return cls._lock
-
+    """
+    Production cluster-safe tracking using Redis Atomic Increments.
+    Essential for Uvicorn multi-worker setups where UI polling hits random workers.
+    """
     @classmethod
     async def hit(cls):
-        async with cls._get_lock():
-            cls.hits += 1
+        try:
+            r = await get_redis()
+            await r.incr("app:metrics:cache_hits")
+        except: pass
 
     @classmethod
     async def miss(cls):
-        async with cls._get_lock():
-            cls.misses += 1
+        try:
+            r = await get_redis()
+            await r.incr("app:metrics:cache_misses")
+        except: pass
 
     @classmethod
-    def stats(cls) -> dict:
-        total = cls.hits + cls.misses
-        return {
-            "hits": cls.hits,
-            "misses": cls.misses,
-            "total": total,
-            "hit_rate": f"{(cls.hits / total * 100):.1f}%" if total > 0 else "0%",
-        }
+    async def stats(cls) -> dict:
+        try:
+            r = await get_redis()
+            hits = int(await r.get("app:metrics:cache_hits") or 0)
+            misses = int(await r.get("app:metrics:cache_misses") or 0)
+            total = hits + misses
+            return {
+                "hits": hits,
+                "misses": misses,
+                "total": total,
+                "hit_rate": f"{(hits / total * 100):.1f}%" if total > 0 else "0%",
+            }
+        except:
+            return {"hits": 0, "misses": 0, "total": 0, "hit_rate": "0%"}
+
+    @classmethod
+    async def reset(cls):
+        try:
+            r = await get_redis()
+            await r.delete("app:metrics:cache_hits", "app:metrics:cache_misses")
+        except: pass
 
 
 # ── TTL strategy ──
 class CacheTTL:
-    """Different data types need different TTLs."""
-    TRENDING = 60          # 1 min
-    USER_RECS = 300        # 5 min
-    STATIC = 3600          # 1 hour
-    JITTER_MAX = 30        # random jitter range (seconds)
+    """Different data types deserve different cache lifetimes."""
+    TRENDING  = 60     # 1 min   — trending movies change fast
+    USER_RECS = 300    # 5 min   — personalized recommendations
+    STATIC    = 3600   # 1 hour  — metadata, movie details
+    JITTER_MAX = 30    # ± jitter to prevent thundering herd on mass expiry
 
 
 # ── Connection management ──
 
-async def get_redis() -> redis.Redis:
-    """Get or create async Redis connection with optimized settings."""
-    global _redis_pool
-    if _redis_pool is None:
+async def get_redis(db: int = 0) -> redis.Redis:
+    """Get or create a pooled async Redis connection for a specific database."""
+    global _redis_pools
+    if db not in _redis_pools:
         settings = get_settings()
-        _redis_pool = redis.from_url(
-            settings.redis_url,
+        # Ensure we inject the correct DB into the connection URL
+        base_url = settings.redis_url.rstrip("/")
+        # If url already has a DB index (e.g. redis://localhost:6379/0), strip it
+
+        base_url = re.sub(r"/\d+$", "", base_url)
+        db_url = f"{base_url}/{db}"
+
+        _redis_pools[db] = redis.from_url(
+            db_url,
             encoding="utf-8",
             decode_responses=True,
-            max_connections=100,
-            socket_timeout=5,
+            max_connections=200,       # Production: higher pool ceiling
+            socket_timeout=5,          # Hardened timeouts for 10K RPS
             socket_connect_timeout=5,
+            retry_on_timeout=True,     # Auto-retry transient failures
         )
-    return _redis_pool
+        logger.info(f"Redis connection pool initialized for DB {db}")
+    return _redis_pools[db]
 
 
 async def close_redis():
-    """Close Redis connection on shutdown."""
-    global _redis_pool
-    if _redis_pool is not None:
-        await _redis_pool.aclose()
-        _redis_pool = None
+    """Gracefully close all Redis connection pools on server shutdown."""
+    global _redis_pools
+    for db, pool in _redis_pools.items():
+        await pool.aclose()
+        logger.info(f"Redis connection pool closed for DB {db}")
+    _redis_pools.clear()
 
 
 # ── Key design (namespaced + versioned) ──
 
 def make_rec_key(user_id: int, version: str = "v1") -> str:
-    """Standardized key: app:rec:{version}:user:{id}"""
+    """Namespaced Redis key. Versioning allows safe cache invalidation on model updates."""
     return f"app:rec:{version}:user:{user_id}"
-
-
-# ── Core: get_or_compute (production-grade stampede protection) ──
-
-async def get_or_compute(
-    key: str,
-    compute_fn,
-    ttl: int = CacheTTL.USER_RECS,
-) -> tuple[dict, bool]:
-    """
-    Cache-first with full stampede protection.
-
-    Returns: (result_dict, was_cached)
-
-    Flow:
-      1. Try cache → return on hit
-      2. Acquire token-based lock → compute → store with jitter → return
-      3. If lock taken → bounded retry (3x) → retry cache
-      4. Fallback: compute anyway (API must never fail)
-    """
-    try:
-        r = await get_redis()
-
-        # 1. Try cache
-        cached = await r.get(key)
-        if cached:
-            await CacheMetrics.hit()
-            return json.loads(cached), True
-
-        await CacheMetrics.miss()
-        lock_key = f"lock:{key}"
-        token = str(uuid.uuid4())
-
-        # 2. Acquire lock (token-based for safe release)
-        if await r.set(lock_key, token, nx=True, ex=5):
-            try:
-                result = await compute_fn()
-                ttl_jitter = ttl + random.randint(0, CacheTTL.JITTER_MAX)
-                await r.set(key, json.dumps(result), ex=ttl_jitter)
-                return result, False
-            finally:
-                # Only delete if WE still own the lock
-                val = await r.get(lock_key)
-                if val == token:
-                    await r.delete(lock_key)
-
-        # 3. Another worker is computing → bounded retry
-        for _ in range(3):
-            await asyncio.sleep(0.05)
-            cached = await r.get(key)
-            if cached:
-                await CacheMetrics.hit()
-                return json.loads(cached), True
-
-    except Exception as e:
-        logger.warning(f"Redis failed for key={key}: {e}")
-
-    # 4. Fallback: compute without cache (API must never break)
-    return await compute_fn(), False

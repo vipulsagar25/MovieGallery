@@ -11,8 +11,19 @@ class Settings(BaseSettings):
     # Redis config (for later)
     redis_url: str = "redis://localhost:6379"
 
+    # TMDB Credentials (from .env)
+    tmdb_api_key: str = ""
+    tmdb_read_token: str = ""
+
+    # Supabase Credentials (from .env)
+    supabase_url: str = ""
+    supabase_anon_key: str = ""
+
     class Config:
-        env_file = ".env"
+        env_file = "c:/Users/91733/Desktop/Recomm~~10k/.env"
+        env_file_encoding = 'utf-8'
+        extra = "ignore"  # Ensure extra env vars don't crash the app
+
 
 
 @lru_cache()

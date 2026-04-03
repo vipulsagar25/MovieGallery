@@ -1,0 +1,27 @@
+# Dockerfile.worker
+# This Dockerfile packages your ML worker into an isolated, deployable container.
+# Supported on: AWS Fargate, AWS Elastic Container Service (ECS), Render, Railway, DigitalOcean
+
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies required by FAISS and implicit algorithms
+RUN apt-get update && apt-get install -y libomp-dev && rm -rf /var/lib/apt/lists/*
+
+# Install python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files (ML Models, data, and scripts)
+COPY api/ ./api/
+COPY ML_model/ ./ML_model/
+COPY Data/ ./Data/
+COPY .env .
+
+# Set python path so core modules load correctly
+ENV PYTHONPATH="/app/api"
+
+# Run the ML worker
+CMD ["python", "api/worker.py"]

@@ -1,6 +1,17 @@
 # APIs and Web Server
 fastapi
 uvicorn
+orjson
+psutil
+
+# Serverless (AWS Lambda)
+mangum
+
+# Database & Storage
+supabase
+
+# Settings
+pydantic-settings
 
 # Redis & Caching
 redis
