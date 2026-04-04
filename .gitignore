@@ -11,14 +11,14 @@ __pycache__/
 *$py.class
 *.so
 
-# Massive ML Artifacts & Datasets
-ML_model/
-Data/
-*.npz
-*.npy
-*.faiss
-*.pkl
-*.tsv
+# Massive datasets (Keep these ignored)
+Data/genome-scores.csv
+Data/ratings.csv
+
+# Keep all other Data and ML_model files for production
+# (Unignore specific extensions since the above covers the huge ones)
+!Data/*.csv
+!ML_model/*
 
 # Redis / Log Dumps
 dump.rdb
