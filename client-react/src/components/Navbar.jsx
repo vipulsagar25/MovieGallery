@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="topnav">
       <div className="topnav-logo" onClick={() => navigate(user?.isAdmin ? '/analytics' : '/')}>
-        Movie<span>AI</span>
+        Movie<span>Gallery</span>
       </div>
       <div className="topnav-links">
         {!user?.isAdmin && (

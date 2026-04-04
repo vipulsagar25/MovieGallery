@@ -1,4 +1,4 @@
-# MovieGallery (MovieAI)
+# Movie Gallery 🍿
 
 Production-grade collaborative filtering recommendation system.
 

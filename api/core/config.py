@@ -3,7 +3,7 @@ from functools import lru_cache
 
 
 class Settings(BaseSettings):
-    app_name: str = "Recommendation System"
+    app_name: str = "Movie Gallery"
     debug: bool = True
     host: str = "127.0.0.1"
     port: int = 8000
