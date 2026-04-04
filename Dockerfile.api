@@ -1,0 +1,31 @@
+# Dockerfile.api
+# This Dockerfile packages the FastAPI application for production/local deployment.
+
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y libomp-dev && rm -rf /var/lib/apt/lists/*
+
+# Install python dependencies
+# Using requirements.txt for now, though requirements-lock.txt is recommended for reproducible builds.
+COPY requirements-lock.txt ./requirements-lock.txt
+COPY requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements-lock.txt
+
+# Copy application files (API, ML Models, Data)
+COPY api/ ./api/
+COPY ML_model/ ./ML_model/
+COPY Data/ ./Data/
+COPY .env .
+
+# Expose port
+EXPOSE 8000
+
+# Set python path so core modules load correctly
+ENV PYTHONPATH="/app/api"
+
+# Run Uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
