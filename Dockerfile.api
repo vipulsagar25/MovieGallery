@@ -19,7 +19,6 @@ RUN pip install --no-cache-dir -r requirements-lock.txt
 COPY api/ ./api/
 COPY ML_model/ ./ML_model/
 COPY Data/ ./Data/
-COPY .env .
 
 # Expose port
 EXPOSE 8000

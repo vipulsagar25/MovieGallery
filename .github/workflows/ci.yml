@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements-lock.txt
+          
+      - name: Run Basic Health Check Tests
+        run: |
+          # Placeholder for Pytest
+          echo "Run pytest here"
+          
+      - name: Build Docker Container
+        run: |
+          docker build -t movieapi:latest -f Dockerfile.api .

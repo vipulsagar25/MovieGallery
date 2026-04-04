@@ -1,0 +1,33 @@
+# Dockerfile.frontend
+# Multi-stage build for the Vite React App
+
+# Stage 1: Build the React Application
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies
+COPY client-react/package.json client-react/package-lock.json ./
+RUN npm ci
+
+# Copy source code
+COPY client-react/ ./
+
+# We need the API URL at build time for Vite
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
+# Build the production bundle
+RUN npm run build
+
+# Stage 2: Serve using Nginx
+FROM nginx:alpine
+
+# Copy the built files from the previous stage
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose standard HTTP port
+EXPOSE 80
+
+# Run nginx quietly
+CMD ["nginx", "-g", "daemon off;"]

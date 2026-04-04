@@ -1,0 +1,69 @@
+version: '3.8'
+
+# PRODUCTION READY DOCKER-COMPOSE
+# Usage: docker-compose -f docker-compose.prod.yml up -d --build
+
+services:
+  redis:
+    image: redis:7.4-alpine
+    restart: always
+    expose: 
+      - "6379"
+    # Port 6379 is NOT exposed to host, only to internal bridge network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # We removed the Postgres container here since the backend natively talks to Supabase!
+  
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    restart: always
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      # Make sure .env includes SUPABASE_URL and SUPABASE_ANON_KEY 
+    depends_on:
+      redis:
+        condition: service_healthy
+    # We remove the local volumes mapping so the baked-in code is used
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    restart: always
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        # For a single VPS, Nginx will proxy /api to the backend.
+        # But if bypassing Nginx proxy, the UI needs to know where the API is.
+        # Assuming you connect to a domain e.g. https://api.myproject.com or using Render wrapper.
+        - VITE_API_URL=/api
+    ports:
+      - "80:80"
+    restart: always
+
+  # Simple Nginx reverse proxy to route traffic:
+  # /api/* -> api container
+  # /* -> frontend container
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+      - frontend

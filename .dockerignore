@@ -1,0 +1,38 @@
+# Security: Exclude environment variable files
+.env
+.env.*
+*.env
+
+# Git / System
+.git
+.gitignore
+.dockerignore
+.DS_Store
+Thumbs.db
+
+# Python environments & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Node.js
+node_modules/
+client-react/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build Outputs
+dist/
+build/
+client-react/dist/
+
+# Large binaries and local test models (optional, Dockerfiles manually copy these if needed)
+*.npz
+*.npy
+*.faiss
+*.pkl
