@@ -4,8 +4,20 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-MOVIES_FILE = Path(__file__).parent.parent.parent / "Data" / "movies.csv"
-LINKS_FILE = Path(__file__).parent.parent.parent / "Data" / "links.csv"
+def get_project_root() -> Path:
+    """Robustly find the project root directory."""
+    # Start from the current file's directory
+    current = Path(__file__).resolve().parent
+    # Look for the 'api' directory as a marker of the root
+    for parent in [current] + list(current.parents):
+        if (parent / "api").is_dir() and (parent / "Data").is_dir():
+            return parent
+    # Fallback to the previous logic if the marker isn't found
+    return Path(__file__).resolve().parent.parent.parent
+
+ROOT = get_project_root()
+MOVIES_FILE = ROOT / "Data" / "movies.csv"
+LINKS_FILE = ROOT / "Data" / "links.csv"
 _movie_db = {}
 
 def load_movie_metadata():
@@ -15,16 +27,25 @@ def load_movie_metadata():
         return
         
     try:
+        logger.info(f"Checking for metadata at: {MOVIES_FILE}")
+        if not MOVIES_FILE.exists():
+            logger.error(f"CRITICAL: Metadata file NOT FOUND at {MOVIES_FILE}")
+            return
+
         # Load IMDB links first into a temporary blazing-fast map
         links_db = {}
         try:
-            with open(LINKS_FILE, mode='r', encoding='utf-8') as lf:
-                lreader = csv.DictReader(lf)
-                for lrow in lreader:
-                    try:
-                        links_db[int(lrow['movieId'])] = lrow['imdbId']
-                    except ValueError:
-                        continue
+            if LINKS_FILE.exists():
+                with open(LINKS_FILE, mode='r', encoding='utf-8') as lf:
+                    lreader = csv.DictReader(lf)
+                    for lrow in lreader:
+                        try:
+                            links_db[int(lrow['movieId'])] = lrow['imdbId']
+                        except ValueError:
+                            continue
+                logger.info(f"Loaded {len(links_db):,} IMDB links.")
+            else:
+                logger.warning(f"Links file not found at {LINKS_FILE}")
         except Exception as e:
             logger.warning(f"Failed to load links.csv: {e}")
 
@@ -44,7 +65,7 @@ def load_movie_metadata():
                     continue
                     
         # --- STAGE 3: Hydrate 86k TMDB Poster URLs ---
-        posters_file = Path(__file__).parent.parent.parent / "Data" / "posters.csv"
+        posters_file = ROOT / "Data" / "posters.csv"
         if posters_file.exists():
             with open(posters_file, mode="r", encoding="utf-8") as pf:
                 reader = csv.DictReader(pf)
@@ -59,9 +80,9 @@ def load_movie_metadata():
                         except ValueError:
                             pass
 
-        print(f"Hydration complete: Loaded {len(_movie_db):,} movies into Memory Cache.")
+        logger.info(f"✅ Success: Loaded {len(_movie_db):,} movies into Memory Cache.")
     except Exception as e:
-        logger.error(f"Failed to load movie metadata from {MOVIES_FILE}: {e}")
+        logger.error(f"❌ Failed to load movie metadata from {MOVIES_FILE}: {e}")
 
 
 def hydrate_recommendations(movie_ids: list[int]) -> list[dict]:
